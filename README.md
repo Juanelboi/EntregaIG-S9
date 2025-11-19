@@ -2,7 +2,9 @@
 
 Un fragment shader GLSL que genera una visualización de ondas animadas con colores dinámicos basados en funciones trigonométricas.
 
-## Cómo fue implementado
+## Cómo fue hecho
+Para realiazr el shader tome de base el shader de molinillo del github de mi profesor Modesto Fernando Castrillón Santana ([Enlace al github](https://github.com/otsedom/otsedom.github.io/blob/main/IG/S9/README.md)). Quise hacer el tipico molinillo con curvas popular para "hipnotizar" y le añadi cambios de colo por que pense que pegarian con el tema. Los cambios de color los saque de Iñigo Quilez y sus ejemplos que tiene en su web y youtube. [Video de youtube que explica la formula en la que me baso](https://www.youtube.com/shorts/TH3OTy5fTog).
+
 
 El shader fue desarrollado siguiendo estos pasos:
 
@@ -12,8 +14,8 @@ El shader fue desarrollado siguiendo estos pasos:
 
 3. **Generación de ondas**: Creé una función de onda combinando:
    - El ángulo multiplicado por 12.0 (genera 12 patrones circulares)
-   - El radio multiplicado por 5.0 (genera ondas que se expanden desde el centro)
-   - El tiempo (`u_time`) para crear animación (multiplico por 2.0 para mayor velocidad)
+   - El radio multiplicado por 32.0 (genera ondas que se expanden desde el centro)
+   - El tiempo (`u_time`) para crear animación (multiplico por 15.0 para mayor velocidad)
 
 4. **Coloración dinámica**: Generé tres canales RGB usando `cos()` con fases diferentes:
    - Base de 0.5 con amplitud 0.5
