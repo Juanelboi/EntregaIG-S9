@@ -52,12 +52,12 @@ Este shader crea un efecto visual fascinante combinando:
 Puedes modificar los siguientes valores en el shader para cambiar el efecto:
 
 ```glsl
-sin(angle*12.0 + radius*5.0 - u_time*2.0)
+sin(angle*12.0 + radius*32.0 - u_time*15.0)
 ```
 
 - `12.0`: Número de ondas angulares (aumentar = más patrones circulares)
-- `5.0`: Frecuencia radial (aumentar = más ondas hacia afuera)
-- `2.0`: Velocidad de animación (aumentar = más rápido)
+- `32.0`: Frecuencia radial (aumentar = más ondas hacia afuera)
+- `15.0`: Velocidad de animación (aumentar = más rápido)
 
 ## Funcionamiento
 
@@ -67,20 +67,10 @@ sin(angle*12.0 + radius*5.0 - u_time*2.0)
 4. Crea tres canales de color (R, G, B) con fases diferentes
 5. Dibuja el resultado final
 
-## Uso
-
-Para utilizar este shader en tu proyecto:
-
-```glsl
-// Cargar el archivo .frag en tu aplicación WebGL/OpenGL
-// Asegurar de pasar los uniforms correctamente:
-// - u_resolution: vec2 con el tamaño de la viewport
-// - u_time: float con el tiempo en segundos
-```
 
 ## Requisitos
 
-- Navegador compatible con WebGL o aplicación OpenGL/WebGL
+- Navegador compatible con WebGL o aplicación OpenGL/WebGL o The Book of Shaders
 - GLSL compatible (ES 100 o superior)
 
 ## Versión
